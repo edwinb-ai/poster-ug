@@ -53,7 +53,7 @@
 \RequirePackage[size = a0, scale = 1.5]{beamerposter}
 \RequirePackage{etoolbox}
 \RequirePackage{pgfpages}
-\RequirePackage[utf8]{inputenx}
+\RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{calc}
 \RequirePackage[final]{microtype}
@@ -97,32 +97,33 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\definecolor{uiored}{cmyk}{0, 1, 1, 0}
+\definecolor{ugyellow}{cmyk}{0, 0.17, 0.6, 0} % UG-yellow
 \definecolor{uiowhite}{cmyk}{0, 0, 0, 0}
-\definecolor{uioblack}{cmyk}{0, 0, 0, 1}
-\definecolor{uioheader}{cmyk}{0, 0, 0, 0.6}
-\definecolor{uiobackground}{cmyk}{0, 0, 0, 0.2}
+\definecolor{ugblue}{cmyk}{0.92, 0.44, 0, 0.45} % UG-blue
+\definecolor{uioheader}{cmyk}{0.32, 0.31, 0.67, 0.02} % UG-gold
+% \definecolor{uioheader}{cmyk}{0, 0, 0, 0.6}
+\definecolor{uiobackground}{cmyk}{0, 0, 0, 0.3}
 \definecolor{uiolink}{HTML}{0B5A9D}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \setbeamercolor{structure}{fg = uioheader}
-\setbeamercolor{alerted text}{fg = uiored}
-\setbeamercolor{background canvas}{fg = uioblack, bg = uiobackground}
-\setbeamercolor{headline}{fg = uiowhite, bg = uioblack}
-\setbeamercolor{title in headline}{fg = uiored}
+\setbeamercolor{alerted text}{fg = ugyellow}
+\setbeamercolor{background canvas}{fg = ugblue, bg = uiobackground}
+\setbeamercolor{headline}{fg = uiowhite, bg = ugblue}
+\setbeamercolor{title in headline}{fg = ugyellow}
 \setbeamercolor{author in headline}{fg = uiowhite}
-\setbeamercolor{footline}{fg = uiowhite, bg = uioblack}
+\setbeamercolor{footline}{fg = uiowhite, bg = ugblue}
 
 
 \setbeamercolor{block title}{fg = uiowhite, bg = structure}
-\setbeamercolor{block title example}{fg = uiowhite, bg = uioblack}
-\setbeamercolor{block title alerted}{fg = uiowhite, bg = uiored}
+\setbeamercolor{block title example}{fg = uiowhite, bg = ugblue}
+\setbeamercolor{block title alerted}{fg = uiowhite, bg = ugyellow}
 
 
-\setbeamercolor{block body} {fg = uioblack, bg = uiowhite}
-\setbeamercolor{block body example} {fg = uioblack, bg = uiowhite}
-\setbeamercolor{block body alerted} {fg = uioblack, bg = uiowhite}
+\setbeamercolor{block body} {fg = ugblue, bg = uiowhite}
+\setbeamercolor{block body example} {fg = ugblue, bg = uiowhite}
+\setbeamercolor{block body alerted} {fg = ugblue, bg = uiowhite}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -172,26 +173,27 @@
                            rightskip = 3cm plus 20cm]{headline}
         \vskip-0.5cm
         \includegraphics[scale = 1.5]
-        {uioposter-images/uioposter-logo-\uioposter@lang}
+        % {uioposter-images/uioposter-logo-\uioposter@lang}
+        {uioposter-images/escudo-horizontal-png.png}
         \usebeamerfont{title in headline}
         \usebeamercolor{title in headline}
-        \color{fg}
+        \color{uiowhite}
         \vskip0ex
         \hskip-0.05ex
         \inserttitle
         \vskip1ex
         \usebeamerfont{author in headline}
         \usebeamercolor{author in headline}
-        \color{fg}
+        \color{ugyellow}
         \hskip-0.05ex
         \insertauthor
-        \ifdefempty{\insertinstitute}{}
-        {
-            \vskip1ex
-            \usebeamerfont{institute}
-            \def\beamer@andinst{\quad}
-            \insertinstitute
-        }
+        % \ifdefempty{\insertinstitute}{}
+        % {
+        %     \vskip1ex
+        %     \usebeamerfont{institute}
+        %     \def\beamer@andinst{\quad}
+        %     \insertinstitute
+        % }
         \vskip3cm
     \end{beamercolorbox}
     \vskip1cm
@@ -205,7 +207,7 @@
     \begin{beamercolorbox}[wd = \paperwidth]{footline}
         \vskip2cm
         \hskip4.1cm
-        \includegraphics[scale = 1.5]{uioposter-images/uioposter-apollon}
+        \includegraphics[scale = 1.5]{uioposter-images/ciencias-e-ingenierias-png.png}
         \vskip2cm
     \end{beamercolorbox}
 }
