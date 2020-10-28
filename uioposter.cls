@@ -129,7 +129,7 @@
 
 \setbeamerfont{title in headline}{family = \sffamily,
                                   series = \bfseries,
-                                  size   = \VeryHuge}
+                                  size   = \Huge}
 \setbeamerfont{author in headline}{family = \sffamily,
                                    series = \bfseries,
                                    size   = \Large}
@@ -172,7 +172,8 @@
                            leftskip  = 3cm,
                            rightskip = 3cm plus 20cm]{headline}
         \vskip-0.5cm
-        \includegraphics[scale = 1.5]
+        \centering
+        \includegraphics[scale = 1.3]
         % {uioposter-images/uioposter-logo-\uioposter@lang}
         {uioposter-images/escudo-horizontal-png.png}
         \usebeamerfont{title in headline}
@@ -187,13 +188,13 @@
         \color{ugyellow}
         \hskip-0.05ex
         \insertauthor
-        % \ifdefempty{\insertinstitute}{}
-        % {
-        %     \vskip1ex
-        %     \usebeamerfont{institute}
-        %     \def\beamer@andinst{\quad}
-        %     \insertinstitute
-        % }
+        \ifdefempty{\insertinstitute}{}
+        {
+            \vskip1ex
+            \usebeamerfont{institute}
+            \def\beamer@andinst{\quad}
+            \insertinstitute
+        }
         \vskip3cm
     \end{beamercolorbox}
     \vskip1cm

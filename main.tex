@@ -17,32 +17,33 @@
 \usepackage{lipsum}                                % Dummy text
 \usepackage[figwidth = 0.98\linewidth]{todonotes}  % Dummy image (and more!)
 \usepackage[absolute, overlay]{textpos}            % Figure placement
+\usepackage{hyperref}
 \setlength{\TPHorizModule}{\paperwidth}
 \setlength{\TPVertModule}{\paperheight}
 
 
-\title{Some Lengthy and Technical Title}
+\title{Applications of Machine Learning to Soft Matter}
 \author
 {%
-    First Author\inst{1}
+    Edwin Bedolla\inst{1, $\dagger$}
     \and
-    Second Author\inst{2}
+    Edmundo Vázquez\inst{1}
     \and
-    Third Author\inst{1}
+    Ramón Castañeda-Priego\inst{1,2}
 }
 %% Optional:
 \institute
 {
-    \inst{1} Department of Mathematics
+    \inst{1} División de Ciencias e Ingenierías
     \and
-    \inst{2} Department of Informatics
+    \inst{2} Departamento de Ingeniería Física
 }
 % Or:
 %\institute{Contact information}
 
 
 %% Remove footline:
-% \setbeamertemplate{footline}{}
+\setbeamertemplate{footline}{}
 
 
 \begin{document}
@@ -51,26 +52,42 @@
 
 
 \begin{column}{0.5\textwidth - 1.5cm}
-    \begin{block}{Introduction}
-        The basic \structure{block} looks like this.
-    \end{block}
-
-    \begin{exampleblock}{Does it come in black?}
-        Sure, use an \textbf{exampleblock}!
-    \end{exampleblock}
-
-    \begin{alertblock}{How do you make it pop?}
-        Use an \alert{alertblock}!
+    \begin{alertblock}{Abstract}
+        With recent developments in Machine Learning (ML) technology, Soft Matter (SM) has been adopting several methodologies to enhance and provide new insights into difficult problems within the field. In this work, we showcase two recent applications of ML to SM systems, namely a data-driven ML model to show how structure is important to glassy dynamics; and a Deep Learning techinique to train ML models in order to detect topological defects in liquid crystals with data from video microscopy experiments. We briefly discuss the advantages and shortcomings of these frameworks, with the hope that future research can adopt some of these ideas and techniques in order to empower problem solving within SM.
     \end{alertblock}
 
-    \begin{block}{Method}
-        \lipsum[1]
+    \begin{block}{Introduction}
+        Within the Condensed Matter Physics field, Machine Learning (ML) is currently used in several research areas, ranging from
+        quantum matter~\cite{carrasquilla_2020}, solid state physics~\cite{schmidt2019recent}, and more importantly, Soft Matter (SM). 
+        The need to use ML is directly related to the amount of data that usual techniques
+        create, in the form of experiments and computer simulations.
+        Furthermore, there is a motivation that by using ML models, coupled with physics-designed
+        features, new insights and physical parameters can be found from the datasets.
+        For a more complete overview of the topic, we
+        refer the reader to a recent review~\cite{bedolla2020}.
+
+        Most of the applications that have been used deal almost exclusively with
+        Hard Matter systems, such as spin systems like the $XY$ model, the Potts model,
+        the Ising model, and others. This fact is due to ML models being developed
+        mainly for grid-like data, such as images in computer vision. 
+        Due to the fact that spin systems are grid-like data, ML models can be
+        readily applied to them, although care must be taken when training and other
+        technical details to ensure that the results obtained are physicaly meaningful
+        and correct.
+
+        On the other hand, SM has seen very little applications due
+        to the fact that modern ML technology does not handle off-lattice and
+        continuous data easily. Nevertheless, some work has been carried out
+        in developing carefuly crafted features from simulation and experimental
+        data that have boosted ML applications in the field of SM.
+
+        In this short review, we will discuss two such applications, one that deals
+        with glassy dynamics and another that deals with liquid crystal structure
+        from experimental data.
     \end{block}
 
     \begin{block}{Results}
-        \lipsum[2]
-        \missingfigure{Striking imagery relevant to the research}
-        \unskip
+        % TODO: Agregar una figura de SVMs
     \end{block}
 \end{column}
 
@@ -81,29 +98,40 @@
     \end{block}
 
     \begin{block}{Acknowledgements}
-        \lipsum[5]
+        This work was financially supported by Conacyt grant 287067.
     \end{block}
 
     \begin{block}{References}
-        \lipsum[6]
+        \begin{thebibliography}{99}
+            \bibitem{carrasquilla_2020}
+            Carrasquilla, J.,
+            Machine learning for quantum matter,
+            \emph{Advances in Physics: X},
+            5, pp. 1797528, 2020.
+            
+            \bibitem{schmidt2019recent}
+            Schmidt, J., and Marques, M. and Botti, S. and Marques, M. AL.,
+            Recent advances and applications of machine learning in solid-state materials science,
+            \emph{npj Computational Materials},
+            5, pp. 1-55, 2019.
+            
+            \bibitem{bedolla2020}
+            Bedolla, E., and Padierna, L.C., and Casta{\~n}eda-Priego, R.,
+            Machine Learning for Condensed Matter Physics,
+            \emph{Journal of Physics: Condensed Matter},
+            2020.
+            
+            \end{thebibliography}
     \end{block}
 
     \begin{block}{Contact information}
-        \lipsum[75]
+        $\dagger$ Corresponding Author: \href{mailto:ea.bedollamontiel@ugto.mx}{ea.bedollamontiel@ugto.mx}
+        \\
     \end{block}
 \end{column}
 
 
 \end{columns}
-
-
-\begin{textblock}{0.5}(0.18, 0.94)
-    \color{white}
-    \sffamily
-    \textbf{Write here using textblock}
-    \\
-    Such as contact information or references
-\end{textblock}
 
 
 \end{frame}
