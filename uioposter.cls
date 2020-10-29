@@ -129,13 +129,13 @@
 
 \setbeamerfont{title in headline}{family = \sffamily,
                                   series = \bfseries,
-                                  size   = \Huge}
+                                  size   = \huge}
 \setbeamerfont{author in headline}{family = \sffamily,
                                    series = \bfseries,
-                                   size   = \Large}
+                                   size   = \large}
 \setbeamerfont{institute}{family = \sffamily,
                           series = \mdseries,
-                          size   = \normalsize}
+                          size   = \small}
 
 
 \setbeamerfont{block title}{family = \sffamily,
@@ -149,20 +149,26 @@
                                     size   = \large}
 
 
-\setbeamerfont{block body}{family = \rmfamily,
-                           series = \normalfont,
-                           size   = \normalsize}
-\setbeamerfont{block body example}{family = \rmfamily,
-                                   series = \normalfont,
-                                   size   = \normalsize}
-\setbeamerfont{block body alerted}{family = \rmfamily,
-                                   series = \normalfont,
-                                   size   = \normalsize}
-
-
-\setbeamerfont{item projected}{family = \sffamily,
-                               series = \bfseries,
-                               size   = \small}
+\setbeamerfont{block body}{
+    % family = \rmfamily,
+    % series = \normalfont,
+    size   = \small,
+}
+\setbeamerfont{block body example}{
+    % family = \rmfamily,
+    % series = \normalfont,
+    size   = \small,
+}
+\setbeamerfont{block body alerted}{
+    % family = \rmfamily,
+    % series = \normalfont,
+    size   = \small,
+}
+\setbeamerfont{item projected}{
+    % family = \sffamily,
+    % series = \bfseries,
+    size   = \small
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -178,7 +184,7 @@
         {uioposter-images/escudo-horizontal-png.png}
         \usebeamerfont{title in headline}
         \usebeamercolor{title in headline}
-        \color{uiowhite}
+        \color{uiobackground}
         \vskip0ex
         \hskip-0.05ex
         \inserttitle
